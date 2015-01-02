@@ -1,6 +1,22 @@
-#NAAN and PBJ
+#PBJ && PB && NAAN
+I first wrote Naan but beleve it will probably be the least useful. Here's the best workflow for using PB and PBJ.
+
+###PB is used for saving things to the clipboard & for assigning it to a naanfile.
+
+Example: This will copy "ABC" to your clipbard and save it so it can be recalled by pbj
+````
+        echo "ABC" | pb -n 4
+````
+
+###PBJ is used for assigning past saved things to the clipboard
+
+Example: This will copy ABC to your clipboard
+```
+        pbj -n 4
+```
+
 Naan usage.
-- Run it in the background. Personally, I just run it and forget about it in a tmux or screen window somewhere
+- Run it in the background. Personally, I just run it and forget about it in a tmux or screen window somewhere. 
 ````
         go build naan.go
         ./naan.go
@@ -16,7 +32,4 @@ Naan usage.
         ./pbj -n 4
 ````
 
-Bugs: Copying something re-adds it to the clipboard. This is likely to change which is why it is a bug.
-In the future I will probably have a program to replace pbcopy which takes an integer as an argument. This
-integer would then used as the -n in pbj to recall the value saved to the file
-
+Notes: Naan is always watching your clipboard. Secrets added to your clipboard may be unprotected in your filesystem for a short amount of time. I think Naan is confusing, so personally I have begun using pbj and pb.
