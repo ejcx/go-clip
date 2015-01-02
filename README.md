@@ -5,12 +5,12 @@ Naan usage.
         go build naan.go
         ./naan.go
 ````
--Naan then saves your last 10 clipboard entries into files /tmp/naanfiles/naan.[1-10]
--To get the data out of those files, you can be cool and do something like 
+- Naan then saves your last 10 clipboard entries into files /tmp/naanfiles/naan.[1-10]
+- To get the data out of those files, you can be cool and do something like 
 ````
         cat /tmp/naanfiles/naan.[1-10] | pbcopy
 ````
--or you can be really really cool and use pbj.go like so
+- or you can be really really cool and use pbj.go like so
 ````
         go build pbj.go
         ./pbj -n 4
